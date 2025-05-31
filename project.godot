@@ -1,0 +1,18 @@
+
+; Engine configuration file.
+; Carefully edit through the editor when possible.
+
+[gd_resource type="ConfigFile" format=3]
+
+[application]
+config/name="SimpleJumpGame"
+run/main_scene="res://scenes/Main.tscn"
+config/icon="res://icon.svg"
+
+[rendering]
+quality/intended_usage/framebuffer_allocation=2
+
+[input]
+ui_accept={
+"events":[ {"type":"key","keycode":32}, {"type":"joy_button","button_index":0}, {"type":"screen_touch"} ]
+}

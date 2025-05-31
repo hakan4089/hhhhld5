@@ -1,0 +1,19 @@
+name: Build Android APK
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Export Android
+        uses: firebelley/godot-export@v6
+        with:
+          version: 4.2.2
+          export_platform: "Android"
+          output_path: "build/SimpleJumpGame.apk"
